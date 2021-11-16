@@ -1,4 +1,5 @@
-﻿using GameDevTV.Utils;
+﻿using GameDevTV.Inventories;
+using GameDevTV.Utils;
 using RPG.Attributes;
 using RPG.Core;
 using RPG.Movement;
@@ -12,13 +13,14 @@ using UnityEngine.Events;
 
 namespace RPG.Combat
 {
-	public class Fighter : MonoBehaviour,IAction,ISaveable,IModifierProvider
+	public class Fighter : MonoBehaviour,IAction,ISaveable
 	{
 		[SerializeField] float timeBetweenAttacks = 1f;
 		[SerializeField] Transform rightHandTransform=null, leftHandTransform = null;
 		[SerializeField] WeaponConfig deafultWeapon = null;
 
 		Health target;
+		Equipment equipment;
 		float timeSinceLastAttack = Mathf.Infinity;
 		WeaponConfig currentWeaponConfig;
 		LazyValue<Weapon> currentWeapon;
@@ -27,8 +29,12 @@ namespace RPG.Combat
 		{
 			currentWeaponConfig = deafultWeapon;
 			currentWeapon = new LazyValue<Weapon>(SetupDefualtWeapon);
+			equipment = GetComponent<Equipment>();
+			if (equipment)
+			{
+				equipment.equipmentUpdated += UpdateWeapon;
+			}
 		}
-
 		private Weapon SetupDefualtWeapon()
 		{
 			return AttachWeapon(deafultWeapon);
@@ -60,7 +66,16 @@ namespace RPG.Combat
 			currentWeaponConfig = weapon;
 			currentWeapon.value= AttachWeapon(weapon);
 		}
-
+		private void UpdateWeapon()
+		{
+			var weapon= equipment.GetItemInSlot(EquipLocation.Weapon) as WeaponConfig;
+			if (weapon == null)
+			{
+				EquipWeapon(deafultWeapon);
+			}
+			else
+			EquipWeapon(weapon);
+		}
 		private Weapon AttachWeapon(WeaponConfig weapon)
 		{
 			Animator animator = GetComponent<Animator>();
@@ -94,19 +109,6 @@ namespace RPG.Combat
 			GetComponent<Animator>().ResetTrigger("attack");
 			GetComponent<Animator>().SetTrigger("stopAttack");
 		}
-		public IEnumerable<float> GetAdditiveModifiers(Stat stat)
-		{
-			if(stat == Stat.Damage)
-			{
-				yield return currentWeaponConfig.GetWeaponDamage();
-			}
-		}
-		public IEnumerable<float> GetPercentageModifiers(Stat stat)
-		{
-			if (stat == Stat.Damage)
-				yield return currentWeaponConfig.GetPercentageBonus();
-		}
-
 		// Animation Event
 		void Hit()
 		{
