@@ -48,7 +48,7 @@ namespace RPG.Saving
 			SerializedObject serializedObject = new SerializedObject(this);
 			SerializedProperty property= serializedObject.FindProperty("uniqueIdendifier");
 
-			print("Editing");
+			//print("Editing");
 			if (string.IsNullOrEmpty(property.stringValue) || !IsUnique(property.stringValue))
 			{
 				property.stringValue = Guid.NewGuid().ToString();
