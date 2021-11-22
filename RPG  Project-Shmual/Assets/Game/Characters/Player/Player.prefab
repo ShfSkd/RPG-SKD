@@ -14,6 +14,19 @@ CapsuleCollider:
   m_Height: 1.7285618
   m_Direction: 1
   m_Center: {x: 0, y: 0.85570985, z: 0}
+--- !u!114 &1545046140847621048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883067541987895212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc50f73df63cd5469e812a8788288a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Sir Skd
 --- !u!114 &3137443544208562793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,10 +87,13 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 5353bc4307828c443987c3c067bdfd56, type: 3}
     hotspot: {x: 0, y: 0}
   - type: 3
-    texture: {fileID: 2800000, guid: 9cda48e378d35dc4ab62c87729c084dd, type: 3}
+    texture: {fileID: 2800000, guid: 7ec1dbfa4ac227442ae8e6e238233e41, type: 3}
     hotspot: {x: 0, y: 0}
   - type: 4
     texture: {fileID: 2800000, guid: d0bd63dc4e8d4a845a0f198c39644e18, type: 3}
+    hotspot: {x: 0, y: 0}
+  - type: 6
+    texture: {fileID: 2800000, guid: 9cda48e378d35dc4ab62c87729c084dd, type: 3}
     hotspot: {x: 0, y: 0}
   maxNavMeshProjectionDistance: 1
   raycastRaduis: 1
@@ -107,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spreadDistance: 2
+  dropLibrary: {fileID: 0}
 --- !u!1001 &7594247882683655247
 PrefabInstance:
   m_ObjectHideFlags: 0
