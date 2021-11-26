@@ -204,7 +204,7 @@ namespace GameDevTV.Inventories
         /// <returns>-1 if no stack exists or if the item is not stackable.</returns>
         private int FindStack(InventoryItem item)
         {
-            if (!item.IsStackable())
+            if (!item.IsStackable() && item!=null)
             {
                 return -1;
             }

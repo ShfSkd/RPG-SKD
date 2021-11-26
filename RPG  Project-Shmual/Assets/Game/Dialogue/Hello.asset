@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7448988879891982279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 117030a8-db51-4e22-ab30-abc6ab27b68d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: je me connaie?
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 301
+    y: 262
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-2095043489663399218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 2564b2c3-a5bd-487a-aaff-0a0e59eefcc0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Commant ca va?
+  childern:
+  - 7b3bdac6-cb05-40ac-95a2-ab6133c8dfb2
+  - 117030a8-db51-4e22-ab30-abc6ab27b68d
+  rect:
+    serializedVersion: 2
+    x: 50
+    y: 152
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1294266837870684644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 7b3bdac6-cb05-40ac-95a2-ab6133c8dfb2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: bien et toi?
+  childern:
+  - b21773b4-766a-4443-a79e-7c852e8202cf
+  rect:
+    serializedVersion: 2
+    x: 331
+    y: 96
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01356753624fad340b5e2f736b772bd3, type: 3}
+  m_Name: Hello
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2095043489663399218}
+  - {fileID: -1294266837870684644}
+  - {fileID: -7448988879891982279}
+  - {fileID: 5921422442495629601}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &5921422442495629601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: b21773b4-766a-4443-a79e-7c852e8202cf
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Super!
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 593
+    y: 137
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveQuest
