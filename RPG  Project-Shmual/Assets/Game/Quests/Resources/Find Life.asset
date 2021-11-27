@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Find Life
   m_EditorClassIdentifier: 
   objectives:
-  - a
-  - b
+  - reference: 2
+    descreptions: Dance
+  - reference: 3
+    descreptions: Bike
+  rewards:
+  - number: 1
+    item: {fileID: 11400000, guid: 1d54a11c8ecb3c048b0f7ece1cbaa92f, type: 2}

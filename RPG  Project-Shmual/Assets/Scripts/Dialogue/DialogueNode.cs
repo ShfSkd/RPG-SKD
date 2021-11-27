@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPG.Core;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -14,7 +15,7 @@ namespace RPG.Dialogue
 		[SerializeField] Rect rect = new Rect(0, 0, 200, 100);
 		[SerializeField] string onEnterAction;
 		[SerializeField] string onExitAction;
-
+		[SerializeField] Condition condition;
 		public string GetText()
 		{
 			return text;
@@ -38,6 +39,10 @@ namespace RPG.Dialogue
 		public string GetOnExitAction()
 		{
 			return onExitAction;
+		}
+		public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+		{
+			return condition.Check(evaluators);
 		}
 #if UNITY_EDITOR
 		public void SetPosition(Vector2 newPosition)
@@ -75,7 +80,6 @@ namespace RPG.Dialogue
 			isPlayerSpeaking = newIsPlayerSpeaking;
 			EditorUtility.SetDirty(this);
 		}
-
 #endif
 	}
 }

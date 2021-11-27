@@ -48,7 +48,7 @@ namespace RPG.UI
 
 		private void BuildChoiceList()
 		{
-			foreach (Transform child in choiceRoot.transform)
+			foreach (Transform child in choiceRoot)
 			{
 				Destroy(child.gameObject);
 			}

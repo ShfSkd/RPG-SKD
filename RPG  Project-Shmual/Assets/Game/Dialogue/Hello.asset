@@ -17,12 +17,54 @@ MonoBehaviour:
   childern: []
   rect:
     serializedVersion: 2
-    x: 301
-    y: 262
+    x: 337
+    y: 17
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-3718038822384174490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 19f15a1c-6987-472a-87a8-9d5a2e0368b5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: J'ai ce dont tu as besoin
+  childern:
+  - f2d3bd15-22af-4aad-8228-6cbf623913fc
+  rect:
+    serializedVersion: 2
+    x: 295
+    y: 541
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Find Life
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Find Life
+        negate: 0
+      - predicate: HasInventoryItem
+        parameters:
+        - 08ec790b-d9b9-4414-b818-1c096c2201a1
+        negate: 0
 --- !u!114 &-2095043489663399218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +82,8 @@ MonoBehaviour:
   childern:
   - 7b3bdac6-cb05-40ac-95a2-ab6133c8dfb2
   - 117030a8-db51-4e22-ab30-abc6ab27b68d
+  - 6488d241-3375-42e7-bdc5-86417157228d
+  - 19f15a1c-6987-472a-87a8-9d5a2e0368b5
   rect:
     serializedVersion: 2
     x: 50
@@ -48,6 +92,8 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-1294266837870684644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,12 +112,19 @@ MonoBehaviour:
   - b21773b4-766a-4443-a79e-7c852e8202cf
   rect:
     serializedVersion: 2
-    x: 331
-    y: 96
+    x: 315
+    y: 248
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Find Life
+        negate: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +142,72 @@ MonoBehaviour:
   - {fileID: -1294266837870684644}
   - {fileID: -7448988879891982279}
   - {fileID: 5921422442495629601}
+  - {fileID: 2945822901431274761}
+  - {fileID: 1262439894984171306}
+  - {fileID: -3718038822384174490}
+  - {fileID: 8229036920288107655}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1262439894984171306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 276e6419-b2d6-456e-8d48-2085ad490cf4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: pourquoi?
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 591
+    y: 394
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &2945822901431274761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 6488d241-3375-42e7-bdc5-86417157228d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Tres mal
+  childern:
+  - 276e6419-b2d6-456e-8d48-2085ad490cf4
+  rect:
+    serializedVersion: 2
+    x: 301
+    y: 395
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Find Life
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Find Life
+        negate: 1
 --- !u!114 &5921422442495629601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,9 +225,36 @@ MonoBehaviour:
   childern: []
   rect:
     serializedVersion: 2
-    x: 593
-    y: 137
+    x: 588
+    y: 259
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: GiveQuest
+  condition:
+    and: []
+--- !u!114 &8229036920288107655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: f2d3bd15-22af-4aad-8228-6cbf623913fc
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Merci!
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 545
+    y: 542
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
