@@ -7,6 +7,7 @@ namespace RPG.Control
 	{
 		None, Movement, Combat, UI, Pickup,
 		FullPickup,
-		Dialogue
+		Dialogue,
+		Shop
 	}
 }
