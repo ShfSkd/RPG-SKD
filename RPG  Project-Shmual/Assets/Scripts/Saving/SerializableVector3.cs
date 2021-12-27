@@ -4,11 +4,11 @@ using UnityEngine;
 namespace RPG.Saving
 {
 	[System.Serializable]
-	public class SerializbleVector3
+	public class SerializableVector3
 	{
 		float x, y, z;
 
-		public SerializbleVector3(Vector3 vector3)
+		public SerializableVector3(Vector3 vector3)
 		{
 			x = vector3.x;
 			y = vector3.y;

@@ -14,6 +14,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1193403790388625526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6558912332312484485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cddb3ca4ce742f48be71090d596e444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spreadDistance: 1
+  dropLibrary: {fileID: 11400000, guid: ffc7afbe77273e64982a12d6508a4f8d, type: 2}
 --- !u!114 &6202146314165674901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,20 +60,6 @@ MonoBehaviour:
   waypointTolerance: 1
   patrolSpeedFraction: 0.2
   shotDistance: 5
---- !u!114 &1193403790388625526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6558912332312484485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cddb3ca4ce742f48be71090d596e444, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spreadDistance: 1
-  dropLibrary: {fileID: 11400000, guid: ffc7afbe77273e64982a12d6508a4f8d, type: 2}
 --- !u!1001 &1345751223135919393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -293,6 +293,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7288365122488271843, guid: ccf72d8fc84ce2545990d12240dc2e2e, type: 3}
       propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288365122488271843, guid: ccf72d8fc84ce2545990d12240dc2e2e, type: 3}
+      propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7288365122488271855, guid: ccf72d8fc84ce2545990d12240dc2e2e, type: 3}

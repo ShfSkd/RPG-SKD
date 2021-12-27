@@ -1,4 +1,5 @@
-﻿using RPG.Attributes;
+﻿using GameDevTV.Inventories;
+using RPG.Attributes;
 using RPG.Combat;
 using RPG.Movement;
 using System;
@@ -12,6 +13,7 @@ namespace RPG.Control
 	public class PlayerController : MonoBehaviour
 	{
 		Health health;
+		ActionStore actionStore;
 		[Serializable]
 		struct CursorMapping
 		{
@@ -22,12 +24,14 @@ namespace RPG.Control
 		[SerializeField] CursorMapping[] cursorMppaings = null;
 		[SerializeField] float maxNavMeshProjectionDistance = 1f;
 		[SerializeField] float raycastRaduis = 1f;
+		[SerializeField] int numberOfAbilities = 6;
 
 		bool isDraggingUI;
 
 		private void Awake()
 		{
 			health = GetComponent<Health>();
+			actionStore = GetComponent<ActionStore>();
 		}
 		private void Update()
 		{
@@ -37,14 +41,13 @@ namespace RPG.Control
 				SetCursor(CursorType.None);
 				return;
 			}
+			UseAbilities();
 			if (InteractWithComponent()) return;
 			if (InteractWithMovement()) return;
 
 			SetCursor(CursorType.None);
-			print("nothing to do");
+			print("Nothing to do");
 		}
-
-
 		private bool InteractWithUI()
 		{
 			if (Input.GetMouseButtonUp(0))
@@ -63,6 +66,17 @@ namespace RPG.Control
 
 			return false;
 		}
+		private void UseAbilities()
+		{
+			for (int i = 0; i < numberOfAbilities; i++)
+			{
+				if (Input.GetKeyDown(KeyCode.Alpha1 + i))
+				{
+					actionStore.Use(i, gameObject);
+				}
+			}
+		}
+
 		private bool InteractWithComponent()
 		{
 			RaycastHit[] hits = RaycastAllSorted();
@@ -141,7 +155,7 @@ namespace RPG.Control
 			}
 			return cursorMppaings[0];
 		}
-		private static Ray GetMouseRay()
+		public static Ray GetMouseRay()
 		{
 			return Camera.main.ScreenPointToRay(Input.mousePosition);
 		}

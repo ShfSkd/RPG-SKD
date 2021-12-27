@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using GameDevTV.Saving;
+using RPG.Saving;
 
 namespace GameDevTV.Inventories
 {

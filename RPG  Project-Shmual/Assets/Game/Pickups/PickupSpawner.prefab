@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5446317450620040042}
   - component: {fileID: 5069377386248036641}
-  - component: {fileID: 4981578041623215643}
+  - component: {fileID: 7152691817714174869}
   m_Layer: 0
   m_Name: PickupSpawner
   m_TagString: Untagged
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   number: 1
---- !u!114 &4981578041623215643
+--- !u!114 &7152691817714174869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7830889290382365522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bc463fa602aad043b6249f3944e9a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifier: 
+  uniqueIdendifier: 

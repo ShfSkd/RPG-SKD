@@ -15,6 +15,12 @@ namespace RPG.Attributes
 		[SerializeField] UnityEvent<float> takeDamage;
 		[SerializeField] UnityEvent onDie;
 
+		[Serializable]
+		public class TakeDamageEvent : UnityEvent<float>
+		{
+
+		}
+
 		LazyValue<float> healthPoints;
 
 		bool isDead;
@@ -84,7 +90,7 @@ namespace RPG.Attributes
 		{
 			Experience experience = instigator.GetComponent<Experience>();
 			if (experience == null) return;
-			experience.GainExperiencePoint(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
+			experience.GainExperiencePoints(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
 		}
 
 		public float GetPercentage()

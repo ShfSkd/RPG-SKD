@@ -27,6 +27,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Sir Skd
+--- !u!114 &2309936770114665790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883067541987895212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6962c0cefe486e14aafe4ddd07831221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingBalance: 400
 --- !u!114 &3137443544208562793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +125,7 @@ MonoBehaviour:
     hotspot: {x: 0, y: 0}
   maxNavMeshProjectionDistance: 1
   raycastRaduis: 1
+  numberOfAbilities: 6
 --- !u!114 &7298267771342251651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82dcd6b17b9776c4086e0d4bcc549648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2309936770114665790
+--- !u!114 &8842281073397467190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,10 +174,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 883067541987895212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6962c0cefe486e14aafe4ddd07831221, type: 3}
+  m_Script: {fileID: 11500000, guid: 940e27313296ba34bbef0c4e668c8a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 400
+--- !u!114 &8907505753277526459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883067541987895212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bca39880e90b0e49a44ec3e4ac754f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMana: 200
 --- !u!1001 &7594247882683655247
 PrefabInstance:
   m_ObjectHideFlags: 0
