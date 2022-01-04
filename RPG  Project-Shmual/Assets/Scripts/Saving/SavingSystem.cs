@@ -39,7 +39,21 @@ namespace RPG.Saving
 		{
 			File.Delete(GetPathFromSaveFile(saveFile));
 		}
-
+		public bool SaveFileExists(string saveFile)
+		{
+			string path = GetPathFromSaveFile(saveFile);
+			return (!File.Exists(path));
+		}
+		public IEnumerable<string> ListSaves()
+		{
+			foreach (string path in Directory.EnumerateFiles(Application.persistentDataPath))
+			{
+				if (Path.GetExtension(path) == ".sav")
+				{
+					yield return Path.GetFileNameWithoutExtension(path);
+				}
+			}
+		}
 		private void SaveFile(string saveFile, object state)
 		{
 			string path = GetPathFromSaveFile(saveFile);
@@ -85,7 +99,7 @@ namespace RPG.Saving
 		}
 		string GetPathFromSaveFile(string saveFile)
 		{
-			return Path.Combine(Application.persistentDataPath, saveFile + ".sac");
+			return Path.Combine(Application.persistentDataPath, saveFile + ".sav");
 
 		}
 	}

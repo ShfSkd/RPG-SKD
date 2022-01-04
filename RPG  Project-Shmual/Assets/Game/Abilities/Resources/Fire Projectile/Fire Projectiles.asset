@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18c7ea9a8d9542448c682041f2d21c0, type: 3}
+  m_Name: Fire Projectiles
+  m_EditorClassIdentifier: 
+  itemID: 5a8ad5aa-f68b-4346-a975-f247384f8fc1
+  displayName: Fire Projectiles
+  description: 
+  icon: {fileID: 21300000, guid: ec22508be0cdfba4abbaeb770bef08aa, type: 3}
+  pickup: {fileID: 0}
+  stackable: 0
+  price: 100
+  category: 5
+  consumable: 0
+  targetingStrategy: {fileID: 11400000, guid: 839a3c940066c5c4e8d94ff468458334, type: 2}
+  filterStrategies: []
+  effectStragtegies:
+  - {fileID: 11400000, guid: 6f3d177c725561144bd41d7c0c3273e9, type: 2}
+  cooldownTime: 10
+  manaCost: 40

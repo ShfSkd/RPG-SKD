@@ -1,4 +1,5 @@
-﻿using RPG.Control;
+﻿using RPG.Attributes;
+using RPG.Control;
 using System.Collections;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ namespace RPG.Dialogue
 		public bool HandleRaycast(PlayerController callingController)
 		{
 			if (dialogue == null) return false;
+
+			if (GetComponent<Health>().IsDead()) return false;
 
 			if (Input.GetMouseButtonDown(0))
 			{

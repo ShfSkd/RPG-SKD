@@ -89,6 +89,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e9418ad7131720488b767a3308f89d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6019706153626333221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883067541987895212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09795dc417965e240908454500edb2b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonusConfig:
+  - quality: 0
+    stat: 0
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - quality: 2
+    stat: 0
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - quality: 3
+    stat: 4
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - quality: 3
+    stat: 5
+    additiveBonusPerPoint: 0
+    percentageBonusPerPoint: 5
+  - quality: 4
+    stat: 7
+    additiveBonusPerPoint: 5
+    percentageBonusPerPoint: 0
 --- !u!114 &6461419618403914754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +222,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bca39880e90b0e49a44ec3e4ac754f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMana: 200
+--- !u!114 &920723398473684466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883067541987895212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25580d4c2db508b4493ea1d4cb11cb12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7594247882683655247
 PrefabInstance:
   m_ObjectHideFlags: 0

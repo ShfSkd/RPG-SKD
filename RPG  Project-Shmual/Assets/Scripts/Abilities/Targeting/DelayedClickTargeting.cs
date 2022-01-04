@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace RPG.Abilities.Targeting
 {
-	[CreateAssetMenu(fileName = "Demo Targeting", menuName = "Abilities/Targeting/Delayed Click", order = 0)]
+	[CreateAssetMenu(fileName = "Delayed Click Targeting", menuName = "Abilities/Targeting/Delayed Click", order = 0)]
 	public class DelayedClickTargeting : TargetingStrategy
 	{
 		[SerializeField] Texture2D cursorTexture;
@@ -33,7 +33,7 @@ namespace RPG.Abilities.Targeting
 
 			targetingPrefabInstance.localScale = new Vector3(areaEffectRaduis * 2, 1, areaEffectRaduis * 2);
 
-			while (true)
+			while (!data.IsCancelled())
 			{
 				Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
 				RaycastHit raycastHit;
@@ -43,16 +43,16 @@ namespace RPG.Abilities.Targeting
 					if (Input.GetMouseButtonDown(0))
 					{
 						yield return new WaitWhile(() => Input.GetMouseButton(0));
-						playerController.enabled = true;
-						targetingPrefabInstance.gameObject.SetActive(false);
 						data.SetTargetedPoint(raycastHit.point);
 						data.SetTargets(GetGameObjectsInRaduis(raycastHit.point));
-						finished();
-						yield break;
+						break;
 					}
 					yield return null;
 				}
 			}
+			targetingPrefabInstance.gameObject.SetActive(false);
+			playerController.enabled = true;
+			finished();
 
 		}
 
