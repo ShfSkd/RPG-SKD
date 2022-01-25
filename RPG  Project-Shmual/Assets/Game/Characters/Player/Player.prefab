@@ -14,6 +14,23 @@ CapsuleCollider:
   m_Height: 1.7285618
   m_Direction: 1
   m_Center: {x: 0, y: 0.85570985, z: 0}
+--- !u!114 &920723398473684466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883067541987895212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25580d4c2db508b4493ea1d4cb11cb12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnLocation: {fileID: 0}
+  respawnDealy: 3
+  fadeTime: 0.2
+  healthRegenPercentage: 20
+  enemyHealthRegenPercentage: 20
 --- !u!114 &1545046140847621048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6962c0cefe486e14aafe4ddd07831221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 400
+  startingBalance: 460
 --- !u!114 &3137443544208562793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,18 +237,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bca39880e90b0e49a44ec3e4ac754f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &920723398473684466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883067541987895212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25580d4c2db508b4493ea1d4cb11cb12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7594247882683655247

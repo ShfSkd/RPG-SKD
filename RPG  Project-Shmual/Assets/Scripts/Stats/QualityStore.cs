@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.Saving;
+using GameDevTV.Utils;
 
 namespace RPG.Stats
 {
-	public class QualityStore : MonoBehaviour,IModifierProvider,ISaveable
+	public class QualityStore : MonoBehaviour,IModifierProvider,ISaveable,IPredicateEvaluator
 	{
 		[SerializeField] QualityBonus[] bonusConfig;
 
@@ -130,6 +131,19 @@ namespace RPG.Stats
 		public void RestoreState(object state)
 		{
 			assignedPoints = new Dictionary<Quality, int>((IDictionary<Quality, int>)state);
+		}
+
+		public bool? Evaluate(string predicate, string[] parameters)
+		{
+			if(predicate== "MinimumQuality")
+			{
+				if(Enum.TryParse<Quality>(parameters[0],out Quality quality))
+				{
+					return GetPoints(quality) >= Int32.Parse(parameters[1]);
+				}
+			}
+
+			return null;
 		}
 	}
 }

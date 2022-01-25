@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1bb99a09b4fef24db550fa7cc09de04, type: 3}
+  m_Name: Wodden Shield
+  m_EditorClassIdentifier: 
+  itemID: c3e173ba-489b-4fb5-a0ba-4a1c70b04893
+  displayName: Wodden Shield
+  description: Stops ligths hits
+  icon: {fileID: 21300000, guid: 886ffb608498aa04c9c0913d5ac3c394, type: 3}
+  pickup: {fileID: 2846118997803382790, guid: 31b2ada12bc885f4ea20f96acacfd362, type: 3}
+  stackable: 0
+  price: 360
+  category: 1
+  allowedEquipLocation: 6
+  additiveModifiers:
+  - stat: 8
+    value: 5
+  percentageModifiers: []

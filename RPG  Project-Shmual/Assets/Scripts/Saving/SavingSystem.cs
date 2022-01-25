@@ -42,7 +42,7 @@ namespace RPG.Saving
 		public bool SaveFileExists(string saveFile)
 		{
 			string path = GetPathFromSaveFile(saveFile);
-			return (!File.Exists(path));
+			return (File.Exists(path));
 		}
 		public IEnumerable<string> ListSaves()
 		{

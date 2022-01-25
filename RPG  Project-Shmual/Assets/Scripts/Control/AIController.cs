@@ -51,7 +51,7 @@ namespace RPG.Control
 			timeSinceAggrevat = Mathf.Infinity;
 			timeSinceArrivedAtWaypoint = Mathf.Infinity;
 			currentWaypointIndex = 0;
-		}
+		}	
 		Vector3 GetInitialPosition()
 		{
 			return transform.position;

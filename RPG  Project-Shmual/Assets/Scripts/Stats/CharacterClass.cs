@@ -5,7 +5,7 @@ namespace RPG.Stats
 {
 	public enum CharacterClass
 	{
-		Player,Grunt,Archer
+		Player,Grunt,Archer,HeavyEnemy
 
 	}
 }

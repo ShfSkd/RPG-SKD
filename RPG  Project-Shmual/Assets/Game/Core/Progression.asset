@@ -17,11 +17,6 @@ MonoBehaviour:
     stats:
     - stat: 0
       levels:
-      - 200
-      - 240
-      - 280
-      - 320
-      - 360
       - 400
       - 440
       - 480
@@ -35,6 +30,11 @@ MonoBehaviour:
       - 800
       - 840
       - 880
+      - 920
+      - 960
+      - 1000
+      - 1040
+      - 1080
     - stat: 3
       levels:
       - 10
@@ -125,7 +125,6 @@ MonoBehaviour:
     stats:
     - stat: 0
       levels:
-      - 18
       - 60
       - 90
       - 120
@@ -143,11 +142,12 @@ MonoBehaviour:
       - 480
       - 510
       - 540
+      - 570
     - stat: 3
       levels:
-      - 8
-      - 10
-      - 11
+      - 5
+      - 6
+      - 7
       - 13
       - 14
       - 16
@@ -165,8 +165,8 @@ MonoBehaviour:
       - 35
     - stat: 1
       levels:
-      - 80
-      - 120
+      - 88
+      - 160
       - 160
       - 200
       - 240
@@ -207,9 +207,9 @@ MonoBehaviour:
       - 399
     - stat: 3
       levels:
-      - 12
-      - 14
-      - 17
+      - 4
+      - 5
+      - 6
       - 19
       - 22
       - 24
@@ -227,8 +227,8 @@ MonoBehaviour:
       - 53
     - stat: 1
       levels:
-      - 64
-      - 96
+      - 75
+      - 138
       - 128
       - 160
       - 192
@@ -245,3 +245,17 @@ MonoBehaviour:
       - 544
       - 576
       - 608
+  - characterClass: 3
+    stats:
+    - stat: 0
+      levels:
+      - 300
+      - 400
+    - stat: 3
+      levels:
+      - 20
+      - 28
+    - stat: 1
+      levels:
+      - 300
+      - 550

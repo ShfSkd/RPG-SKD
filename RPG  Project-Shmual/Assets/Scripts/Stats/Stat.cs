@@ -12,6 +12,7 @@ namespace RPG.Stats
 		Mana,
 		ManaRegenRate,
 		TotalQualityPoints,
-		BuyingDiscountPercentage
+		BuyingDiscountPercentage,
+		Defence
 	}
 }

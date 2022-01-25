@@ -13,11 +13,12 @@ using UnityEngine.Events;
 
 namespace RPG.Combat
 {
-	public class Fighter : MonoBehaviour,IAction,ISaveable
+	public class Fighter : MonoBehaviour,IAction/*,ISaveable*/
 	{
 		[SerializeField] float timeBetweenAttacks = 1f;
 		[SerializeField] Transform rightHandTransform=null, leftHandTransform = null;
 		[SerializeField] WeaponConfig deafultWeapon = null;
+		[SerializeField] float autoAttackRange = 4f;
 
 		Health target;
 		Equipment equipment;
@@ -49,7 +50,11 @@ namespace RPG.Combat
 			timeSinceLastAttack += Time.deltaTime;
 
 			if (target == null) return;
-			if (target.IsDead()) return;
+			if (target.IsDead())
+			{
+				target = FindNewTargetInRange();
+				if (target == null) return;
+			}
 
 			if (!GetIsInRange(target.transform))
 			{
@@ -61,6 +66,7 @@ namespace RPG.Combat
 				AttackBehavior();
 			}
 		}
+
 		public void EquipWeapon(WeaponConfig weapon)
 		{
 			currentWeaponConfig = weapon;
@@ -105,6 +111,38 @@ namespace RPG.Combat
 
 			}
 		}
+		private Health FindNewTargetInRange()
+		{
+			Health posibleBestEnemy = null;
+			float theBestEnemyDistance = Mathf.Infinity;
+			foreach (var enemy in FindAllTargetsInRange())
+			{
+				float enemyDistance = Vector3.Distance(transform.position, enemy.transform.position);
+
+				if (enemyDistance < theBestEnemyDistance)
+				{
+					posibleBestEnemy = enemy;
+					theBestEnemyDistance = enemyDistance;
+				}
+			}
+			return posibleBestEnemy;
+		}
+		IEnumerable<Health> FindAllTargetsInRange()
+		{
+			RaycastHit[] raycastHits = Physics.SphereCastAll(transform.position, autoAttackRange, Vector3.up);
+			foreach (RaycastHit hit in raycastHits)
+			{
+				Health health = hit.transform.GetComponent<Health>();
+				if (health == null) continue;
+				if (health.IsDead()) continue;
+				if (health.gameObject == gameObject) continue;
+				if (!health.GetComponent<CombatTarget>()) continue;
+
+				yield return health;
+				
+			}
+
+		}
 
 		private void TriggerAttack()
 		{
@@ -121,7 +159,12 @@ namespace RPG.Combat
 		{
 			if (target == null) return;
 			float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
-
+			BaseStats targetBaseStats = target.GetComponent<BaseStats>();
+			if (targetBaseStats != null)
+			{
+				float defence = targetBaseStats.GetStat(Stat.Defence);
+				damage /= 1 + defence / damage;
+			}
 			if (currentWeapon.value != null)
 			{
 				currentWeapon.value.OnHit();
@@ -169,7 +212,7 @@ namespace RPG.Combat
 			GetComponent<Mover>().Cancel();
 		}
 
-		public object CaptureState()
+	/*	public object CaptureState()
 		{
 			return currentWeaponConfig.name;
 		}
@@ -179,6 +222,6 @@ namespace RPG.Combat
 			string weaponName = (string)state;
 			WeaponConfig weapon = Resources.Load<WeaponConfig>(weaponName);
 			EquipWeapon(weapon);
-		}
+		}*/
 	}
 }

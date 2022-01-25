@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61060a2930e1b52439a530a3080a3f18, type: 3}
-  m_Name: Sword
+  m_Name: Wodden Dagger
   m_EditorClassIdentifier: 
-  itemID: 2d02eb86-2241-46c8-ae1b-ebb1ccc39d7e
-  displayName: Sword
+  itemID: 10de77f8-37ef-4736-8d2a-f85bbc37970c
+  displayName: Wodden Dagger
   description: 
   icon: {fileID: 21300000, guid: 24d21e256b498a944a00e2527ed7618c, type: 3}
-  pickup: {fileID: 1487184367804384525, guid: a10c3e1f023fa1042bdc7aa99ef5b940, type: 3}
+  pickup: {fileID: 2846118997803382790, guid: 31b2ada12bc885f4ea20f96acacfd362, type: 3}
   stackable: 0
-  price: 48.5
-  category: 2
+  price: 180
+  category: 0
   allowedEquipLocation: 5
   animatorOverrride: {fileID: 22100000, guid: 06c2bd68678ea7643a69927ca7e34b34, type: 2}
-  equippedPrefab: {fileID: 4564856272236258973, guid: 2791ddbc7d656284fba3cae27b39697e, type: 3}
-  weaponDamage: 8
-  weaponPercentageBonus: 40
-  weaponRange: 2
+  equippedPrefab: {fileID: 8873550027782405233, guid: 73423db00acef814fa7d32ab8174ffe7, type: 3}
+  weaponDamage: 5
+  weaponPercentageBonus: 0
+  weaponRange: 1
   isRightHanded: 1
   projectile: {fileID: 0}

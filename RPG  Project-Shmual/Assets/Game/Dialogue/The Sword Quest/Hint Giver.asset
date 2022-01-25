@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8955860104572804967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 59277bff-2a86-477d-91b4-154a825487e0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes! Tou got it and you Rock
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 233
+    y: 299
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasItemEquiped
+        parameters:
+        - 2d02eb86-2241-46c8-ae1b-ebb1ccc39d7e
+        negate: 0
+--- !u!114 &-3235080496850807725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 7c40e2c6-ae40-4bc0-bd44-8cf8bcb3a389
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Hear that the shop kepper has the sword that rock
+  childern:
+  - 0d40ada8-7998-480d-bac6-5dc67b6e125e
+  - dbe57e5e-7e6f-43dc-9a4d-94babb3175ac
+  - 59277bff-2a86-477d-91b4-154a825487e0
+  rect:
+    serializedVersion: 2
+    x: -15
+    y: 148
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-1052262913408455986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 0d40ada8-7998-480d-bac6-5dc67b6e125e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You need to rock to use it!
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 250
+    y: -1
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: MinimumQuality
+        parameters:
+        - Strength
+        - 4
+        negate: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01356753624fad340b5e2f736b772bd3, type: 3}
+  m_Name: Hint Giver
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -3235080496850807725}
+  - {fileID: -1052262913408455986}
+  - {fileID: 8258471812796783415}
+  - {fileID: -8955860104572804967}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &8258471812796783415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: dbe57e5e-7e6f-43dc-9a4d-94babb3175ac
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I bet you can rock!
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 234
+    y: 149
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: MinimumQuality
+        parameters:
+        - Strength
+        - 4
+        negate: 0
+    - or:
+      - predicate: HasItemEquiped
+        parameters:
+        - 2d02eb86-2241-46c8-ae1b-ebb1ccc39d7e
+        negate: 0
