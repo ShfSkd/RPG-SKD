@@ -1,4 +1,5 @@
 ﻿using GameDevTV.Inventories;
+using GameDevTV.Utils;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace RPG.Quests
 		{
 			public string reference;
 			public string descreptions;
+			public bool usesCondition = false;
+			public Condition completeCondition;
 		}
 
 		public string GetTitle()

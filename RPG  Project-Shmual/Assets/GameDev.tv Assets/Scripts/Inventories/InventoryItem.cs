@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace GameDevTV.Inventories
@@ -128,5 +129,13 @@ namespace GameDevTV.Inventories
             // Require by the ISerializationCallbackReceiver but we don't need
             // to do anything with it.
         }
+#if UNITY_EDITOR
+        public void SetItemID(string newItemID)
+		{
+            if (itemID == newItemID) return;
+            Undo.RecordObject(this, "Change ItemID");
+            EditorUtility.SetDirty(this);
+		}
+#endif
     }
 }

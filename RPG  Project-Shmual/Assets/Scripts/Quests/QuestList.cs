@@ -8,10 +8,16 @@ using GameDevTV.Inventories;
 
 namespace RPG.Quests
 {
-	public class QuestList : MonoBehaviour,ISaveable,IPredicateEvaluator
+	public class QuestList : MonoBehaviour, ISaveable, IPredicateEvaluator
 	{
 		List<QuestStatus> statuses = new List<QuestStatus>();
 		public event Action onUpdate;
+
+
+		private void Update()
+		{
+			CompleteObjectiveByPredicates();
+		}
 
 		public void AddQuest(Quest quest)
 		{
@@ -57,14 +63,33 @@ namespace RPG.Quests
 		{
 			foreach (var reward in quest.GetReward())
 			{
-				bool sucsses= GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, reward.number);
+				bool sucsses = GetComponent<Inventory>().AddToFirstEmptySlot(reward.item, reward.number);
 				if (!sucsses)
 				{
 					GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
 				}
 			}
 		}
+		private void CompleteObjectiveByPredicates()
+		{
+			foreach (QuestStatus status in statuses)
+			{
+				Debug.Log(status.IsComplete());
+				if (status.IsComplete()) continue;
+				Quest quest = status.GetQuest();
 
+				foreach (var objective in quest.GetObjectives())
+				{
+					if (status.IsObjectiveComplete(objective.reference)) continue; 
+					if (!objective.usesCondition) continue;
+					if (objective.completeCondition.Check(GetComponents<IPredicateEvaluator>()))
+					{ 
+						CompleteObjective(quest, objective.reference);
+					}
+
+				}
+			}
+		}
 		public object CaptureState()
 		{
 			List<object> state = new List<object>();
@@ -81,10 +106,10 @@ namespace RPG.Quests
 			if (stateList == null) return;
 
 			statuses.Clear();
-			foreach (object objectState in stateList)
+			foreach (object objectState in stateList) 
 			{
 				statuses.Add(new QuestStatus(objectState));
-				
+
 			}
 		}
 

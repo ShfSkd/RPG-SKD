@@ -564,6 +564,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1352252399}
     m_Modifications:
+    - target: {fileID: 390482275256680289, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 390482275256680289, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 390482275256680289, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1239695239}
+    - target: {fileID: 390482275256680289, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 390482275256680289, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CompleteObjective
+      objectReference: {fileID: 0}
+    - target: {fileID: 390482275256680289, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RPG.Quests.QuestCompeletion, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 390482275256680289, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1115597591088797715, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
       propertyPath: uniqueIdendifier
       value: 2b77b3e1-3428-4fea-8d83-c5ae619f1187
@@ -578,7 +606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6558912332312484485, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
       propertyPath: m_Name
-      value: Heavy Enemy
+      value: Evil Lord
       objectReference: {fileID: 0}
     - target: {fileID: 6558912332312484489, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
       propertyPath: m_RootOrder
@@ -647,6 +675,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6558912332312484489, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
   m_PrefabInstance: {fileID: 1239695236}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1239695238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6558912332312484485, guid: e91aafe27d642c74f8bacda2e52d0ace, type: 3}
+  m_PrefabInstance: {fileID: 1239695236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1239695239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239695238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e475f1b9700f714da89677765593bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: c3dd745802dab7740b5f2c1f17118574, type: 2}
+  objective: kill
 --- !u!1 &1352252398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2671582275727480444, guid: 0adf71d6bb6497d4fa6d0f70968480d6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -570.74976
+      value: -570.75
       objectReference: {fileID: 0}
     - target: {fileID: 2750025593738994866, guid: 0adf71d6bb6497d4fa6d0f70968480d6, type: 3}
       propertyPath: m_AnchorMax.y

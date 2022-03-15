@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 59277bff-2a86-477d-91b4-154a825487e0
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Yes! Tou got it and you Rock
+  text: Yes! You got it and you Rock
   childern: []
   rect:
     serializedVersion: 2
     x: 233
-    y: 299
+    y: 300
     width: 200
     height: 100
   onEnterAction: 
@@ -30,6 +30,31 @@ MonoBehaviour:
         parameters:
         - 2d02eb86-2241-46c8-ae1b-ebb1ccc39d7e
         negate: 0
+--- !u!114 &-4096902985374340988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: d79729ec-6326-4b74-8b05-caf13988fffe
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: How do I rock Harder?
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 498
+    y: -1
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-3235080496850807725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,7 +76,32 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: -15
-    y: 148
+    y: 147
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-1412554293893132496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 39f2c22d-860c-4272-aa18-1a48cc301209
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Okey thanks?
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 513
+    y: 99
     width: 200
     height: 100
   onEnterAction: 
@@ -72,11 +122,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: You need to rock to use it!
-  childern: []
+  childern:
+  - d79729ec-6326-4b74-8b05-caf13988fffe
+  - 39f2c22d-860c-4272-aa18-1a48cc301209
   rect:
     serializedVersion: 2
-    x: 250
-    y: -1
+    x: 247
+    y: 6
     width: 200
     height: 100
   onEnterAction: 
@@ -106,7 +158,61 @@ MonoBehaviour:
   - {fileID: -1052262913408455986}
   - {fileID: 8258471812796783415}
   - {fileID: -8955860104572804967}
+  - {fileID: -4096902985374340988}
+  - {fileID: -1412554293893132496}
+  - {fileID: 7875137091314992032}
+  - {fileID: 4229556855526554288}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &4229556855526554288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: a6043036-32fe-4d80-a562-871cf397ad21
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: yup its on My shopping list
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 527
+    y: 311
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &7875137091314992032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 53763ff7-a3f6-457d-bed3-352689cba660
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I dont have enough coins..
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 517
+    y: 211
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &8258471812796783415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,11 +227,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: I bet you can rock!
-  childern: []
+  childern:
+  - 53763ff7-a3f6-457d-bed3-352689cba660
+  - a6043036-32fe-4d80-a562-871cf397ad21
   rect:
     serializedVersion: 2
-    x: 234
-    y: 149
+    x: 233
+    y: 146
     width: 200
     height: 100
   onEnterAction: 

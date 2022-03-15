@@ -164,8 +164,8 @@ MonoBehaviour:
   childern: []
   rect:
     serializedVersion: 2
-    x: 591
-    y: 394
+    x: 594
+    y: 397
     width: 200
     height: 100
   onEnterAction: 
@@ -230,7 +230,7 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: GiveQuest
+  onExitAction: GiveSomthing
   condition:
     and: []
 --- !u!114 &8229036920288107655

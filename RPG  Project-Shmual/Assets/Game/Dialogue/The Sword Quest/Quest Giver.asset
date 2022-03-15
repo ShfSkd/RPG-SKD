@@ -1,5 +1,273 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6711397514486198056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: b702f3e7-517a-4d9a-a1f1-28f5fd8b47e5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Slay the evil lord
+  childern:
+  - 9ebdac9b-9e8f-4476-9a04-e3e87730956d
+  rect:
+    serializedVersion: 2
+    x: 272
+    y: 193
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Kill The Lord
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Kill The Lord
+        negate: 1
+--- !u!114 &-5960933680225592118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 0312de9d-2d7a-4db6-80df-0f4fb8c01029
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Am I gettting quest now?
+  childern:
+  - 118126d2-1aed-45df-bb7f-7aeac3d22d14
+  rect:
+    serializedVersion: 2
+    x: 486
+    y: 140
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-5100438661523588230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 39470b9e-8511-4ea0-a002-76b46558879f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oh well mabey some other hero will come!
+  childern:
+  - b665f15f-e2c8-4f78-b8da-7fd73490c85b
+  rect:
+    serializedVersion: 2
+    x: 1702
+    y: 260
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-4725379247641536027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 8e74f12a-482a-429a-abb3-6eaf5a791887
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes!
+  childern:
+  - a86ff4f4-0a10-4cc2-858c-2c2c57e298ef
+  rect:
+    serializedVersion: 2
+    x: 1460
+    y: 39
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveQuest
+  condition:
+    and: []
+--- !u!114 &-3750331572603174965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: b665f15f-e2c8-4f78-b8da-7fd73490c85b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No drame please!
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 503
+    y: 238
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-3642678373354642227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: a86ff4f4-0a10-4cc2-858c-2c2c57e298ef
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Thank you our saviour!
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 1709
+    y: 39
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2782330237480773955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: d15db78f-447d-4bd8-a67e-5a1d24d65dd0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No!
+  childern:
+  - 39470b9e-8511-4ea0-a002-76b46558879f
+  rect:
+    serializedVersion: 2
+    x: 1458
+    y: 170
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2545810599900018482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 9ebdac9b-9e8f-4476-9a04-e3e87730956d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: What are you waitong for!
+  childern: []
+  rect:
+    serializedVersion: 2
+    x: 506
+    y: 342
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2277638039140279001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 6a5ba7c4-9545-4192-9efa-54f62723ff5f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: What's the matter
+  childern:
+  - 57037121-926b-428f-84f4-c057c6df225a
+  rect:
+    serializedVersion: 2
+    x: 482
+    y: 32
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-1954553823519648566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 1d6c9040-722b-404b-a089-f2875caddd4a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Could you help us?
+  childern:
+  - 8e74f12a-482a-429a-abb3-6eaf5a791887
+  - d15db78f-447d-4bd8-a67e-5a1d24d65dd0
+  rect:
+    serializedVersion: 2
+    x: 1217
+    y: 27
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,6 +282,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 1219536086121750887}
+  - {fileID: 3504856225355968457}
+  - {fileID: -6711397514486198056}
+  - {fileID: 6050067815045552641}
+  - {fileID: -2277638039140279001}
+  - {fileID: -5960933680225592118}
+  - {fileID: -3750331572603174965}
+  - {fileID: -2545810599900018482}
+  - {fileID: 7089619152320747057}
+  - {fileID: 5869417895927632922}
+  - {fileID: -1954553823519648566}
+  - {fileID: -4725379247641536027}
+  - {fileID: -2782330237480773955}
+  - {fileID: -5100438661523588230}
+  - {fileID: -3642678373354642227}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &1219536086121750887
 MonoBehaviour:
@@ -28,12 +310,135 @@ MonoBehaviour:
   m_Name: 842187f9-e029-4dd5-92c8-02fd7fc822b7
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: 
+  text: Hello Starnge!
+  childern:
+  - 9d256023-a09e-4249-9e59-3d0315b2a3a5
+  - b702f3e7-517a-4d9a-a1f1-28f5fd8b47e5
+  - 55d72c90-2ad3-4091-9b84-c7377955e7ec
+  rect:
+    serializedVersion: 2
+    x: 8
+    y: 95
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &3504856225355968457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 9d256023-a09e-4249-9e59-3d0315b2a3a5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: We live in a terrible times
+  childern:
+  - 6a5ba7c4-9545-4192-9efa-54f62723ff5f
+  - 0312de9d-2d7a-4db6-80df-0f4fb8c01029
+  - b665f15f-e2c8-4f78-b8da-7fd73490c85b
+  rect:
+    serializedVersion: 2
+    x: 254
+    y: 94
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Kill The Lord
+        negate: 1
+--- !u!114 &5869417895927632922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 57037121-926b-428f-84f4-c057c6df225a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Some evil Lord took our land!
+  childern:
+  - 1d6c9040-722b-404b-a089-f2875caddd4a
+  rect:
+    serializedVersion: 2
+    x: 965
+    y: 27
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &6050067815045552641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 55d72c90-2ad3-4091-9b84-c7377955e7ec
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You did it!
   childern: []
   rect:
     serializedVersion: 2
-    x: 9
-    y: 94
+    x: 263
+    y: 332
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - predicate: HasQuest
+        parameters:
+        - Kill The Lord
+        negate: 0
+    - or:
+      - predicate: CompletedQuest
+        parameters:
+        - Kill The Lord
+        negate: 0
+--- !u!114 &7089619152320747057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6078fb098d48b174cb0ea8603950728f, type: 3}
+  m_Name: 118126d2-1aed-45df-bb7f-7aeac3d22d14
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes!
+  childern:
+  - 57037121-926b-428f-84f4-c057c6df225a
+  rect:
+    serializedVersion: 2
+    x: 734
+    y: 136
     width: 200
     height: 100
   onEnterAction: 
